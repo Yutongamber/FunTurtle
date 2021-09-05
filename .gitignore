@@ -1,2 +1,6 @@
 __pycache__
 .idea*
+gsdll64.dll
+gswin64.exe
+gsdll64.lib
+gswin64c.exe
