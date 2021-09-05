@@ -1,4 +1,6 @@
 from turtle import *
+import turtle
+from PIL import Image
 
 def drawTriangle(points, color, myturtle):
     myturtle.fillcolor(color)
@@ -35,6 +37,10 @@ def sierpinski(points, degree, myTurtle):
 
 myturtle = Turtle()
 myWin = myturtle.getscreen()
-mypoints = [(-500, -250), (0, 500), (500, -250)]
+mypoints = [(-300, -150), (0, 300), (300, -150)]
 sierpinski(mypoints, 5, myturtle)
-myWin.exitonclick()
+
+ts = turtle.getscreen()
+ts.getcanvas().postscript(file="results/triangle.eps")
+im = Image.open("results/triangle.eps")
+im.save("results/triangle.jpg")
